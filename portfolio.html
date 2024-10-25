@@ -6,6 +6,49 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Slider Styles */
+        .slider {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            max-width: 100%;
+        }
+
+        .slider-image, .slider-video {
+            min-width: 100%;
+            transition: transform 0.5s ease;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        /* Controls */
+        .slider-container {
+            position: relative;
+        }
+
+        /* Button Style */
+        .slider-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 10px;
+            color: #fff;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .slider-controls .prev {
+            left: 10px;
+        }
+
+        .slider-controls .next {
+            right: 10px;
+        }
+    </style>
 </head>
 <body class="bg-dark text-white">
 
@@ -14,32 +57,56 @@
     
     <h2 class="mt-4">My Portfolio</h2>
 
-    <div class="image-slider mt-4">
-        <div class="slider">
+    <!-- Image Slider -->
+    <div class="slider-container mt-4">
+        <div class="slider image-slider">
             <img src="image/d1.png" class="slider-image" alt="Design 1">
             <img src="image/d2.png" class="slider-image" alt="Design 2">
             <img src="image/d3.png" class="slider-image" alt="Design 3">
         </div>
+        <div class="slider-controls">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
     </div>
 
-    <div class="video-slider mt-5">
-        <div class="slider">
+    <!-- Video Slider -->
+    <div class="slider-container mt-5">
+        <div class="slider video-slider">
             <video class="slider-video" autoplay loop muted>
-                <source src="images/video1.mp4" type="video/mp4">
+                <source src="image/video1.mp4" type="video/mp4">
             </video>
             <video class="slider-video" autoplay loop muted>
-                <source src="images/video2.mp4" type="video/mp4">
+                <source src="image/video2.mp4" type="video/mp4">
             </video>
+        </div>
+        <div class="slider-controls">
+            <button class="prev" onclick="moveVideoSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveVideoSlide(1)">&#10095;</button>
         </div>
     </div>
 
     <a href="index.html" class="btn btn-secondary mt-4">Back to Profile</a>
 </div>
 
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script>
-    // Add your JavaScript for sliders here
+    let imageIndex = 0;
+    let videoIndex = 0;
+
+    function moveSlide(direction) {
+        const images = document.querySelectorAll('.image-slider .slider-image');
+        imageIndex = (imageIndex + direction + images.length) % images.length;
+        document.querySelector('.image-slider').style.transform = `translateX(-${imageIndex * 100}%)`;
+    }
+
+    function moveVideoSlide(direction) {
+        const videos = document.querySelectorAll('.video-slider .slider-video');
+        videoIndex = (videoIndex + direction + videos.length) % videos.length;
+        document.querySelector('.video-slider').style.transform = `translateX(-${videoIndex * 100}%)`;
+    }
 </script>
+
 </body>
 </html>
+
 
