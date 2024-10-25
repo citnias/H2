@@ -17,13 +17,13 @@
         }
 
         .slider {
-            display: inline-flex;
+            display: flex;
             transition: transform 0.5s ease;
-            width: 100%;
+            width: 300%; /* Menyesuaikan dengan jumlah gambar (3 gambar, jadi 300%) */
         }
 
         .slider-image, .slider-video {
-            min-width: 100%;
+            width: 100%; /* Set width to occupy full slider width */
             height: 400px;
             object-fit: cover;
         }
@@ -109,13 +109,13 @@
     function moveSlide(direction) {
         const images = document.querySelectorAll('.image-slider .slider-image');
         imageIndex = (imageIndex + direction + images.length) % images.length;
-        document.querySelector('.image-slider').style.transform = `translateX(-${imageIndex * 100}%)`;
+        document.querySelector('.image-slider').style.transform = `translateX(-${imageIndex * 100 / images.length}%)`;
     }
 
     function moveVideoSlide(direction) {
         const videos = document.querySelectorAll('.video-slider .slider-video');
         videoIndex = (videoIndex + direction + videos.length) % videos.length;
-        document.querySelector('.video-slider').style.transform = `translateX(-${videoIndex * 100}%)`;
+        document.querySelector('.video-slider').style.transform = `translateX(-${videoIndex * 100 / videos.length}%)`;
     }
 </script>
 
