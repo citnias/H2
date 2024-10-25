@@ -1,6 +1,7 @@
 body {
-    background: url('h1.jpg') no-repeat center center fixed; /* Ganti dengan path yang sesuai */
+    background: url('bg.jpg') no-repeat center center fixed;
     background-size: cover;
+        
     animation: backgroundMove 15s infinite linear;
 }
 
