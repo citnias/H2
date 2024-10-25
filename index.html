@@ -1,26 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Profil Perusahaan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .profile-img {
+            width: 200px; /* Ukuran tetap untuk gambar profil */
+            border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+            border: 3px solid #00ff00; /* Border hijau */
+            animation: pulse 2s infinite; /* Animasi untuk efek pernapasan */
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .animated {
+            display: inline-block; /* Memungkinkan efek animasi */
+            animation: fadeIn 1s ease-in-out; /* Animasi untuk efek fade-in */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container text-center mt-5">
         <div class="profile">
-            <img src="HH.jpeg" alt="Your Photo" class="profile-img">
-            <h1 class="name">Hendrik Halawa</h1>
+            <img src="HH.jpeg" alt="Foto Anda" class="profile-img mb-3">
+            <h1 class="display-4">Hendrik Halawa</h1>
             <p class="contact">
-                <span class="animated">Phone: 082267403105</span><br>
+                <span class="animated">Telepon: 082267403105</span><br>
                 <span class="animated">Email: hendrikhalawa711@gmail.com</span>
             </p>
         </div>
         <div class="portfolio-link">
-            <a href="portfolio.html" class="button">View My Portfolio</a>
+            <a href="portfolio.html" class="btn btn-success btn-lg mt-3">Lihat Portofolio Saya</a>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Bootstrap JS dan dependensinya -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
