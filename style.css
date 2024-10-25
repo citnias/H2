@@ -11,12 +11,13 @@ body {
 
 .container {
     text-align: center;
+    padding: 20px; /* Add some padding for better spacing */
 }
 
 .profile-img {
-    width: 706px; /* Set width to 706px */
-    height: 1069px; /* Set height to 1069px */
-    object-fit: cover; /* Ensures the image covers the dimensions without distortion */
+    width: 80%; /* Set width to 80% of the container */
+    max-width: 706px; /* Max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
     border: 3px solid #00ff00;
     animation: pulse 2s infinite;
@@ -29,7 +30,7 @@ body {
 }
 
 .name {
-    font-size: 3em;
+    font-size: 2.5em; /* Adjust font size for better visibility */
     margin: 0.5em 0;
 }
 
@@ -64,3 +65,38 @@ body {
     transform: scale(1.05); /* Scale up the button on hover */
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .name {
+        font-size: 2em; /* Decrease font size for smaller screens */
+    }
+
+    .contact {
+        font-size: 1em; /* Adjust contact font size */
+    }
+
+    .portfolio-link .button {
+        font-size: 1.2em; /* Decrease button font size */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 100%; /* Use full width on small screens */
+        border-radius: 10%; /* Change border-radius for a different look */
+    }
+
+    .name {
+        font-size: 1.8em; /* Further decrease font size */
+    }
+
+    .contact {
+        font-size: 0.9em; /* Further adjust contact font size */
+    }
+
+    .portfolio-link .button {
+        font-size: 1em; /* Further decrease button font size */
+        padding: 6px 12px; /* Further adjust padding */
+    }
+}
