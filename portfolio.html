@@ -8,26 +8,27 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Slider Styles */
-        .slider {
-            display: flex;
+        .slider-container {
+            position: relative;
             overflow: hidden;
-            width: 100%;
             max-width: 100%;
+            margin: auto;
+            height: 400px;
+        }
+
+        .slider {
+            display: inline-flex;
+            transition: transform 0.5s ease;
+            width: 100%;
         }
 
         .slider-image, .slider-video {
             min-width: 100%;
-            transition: transform 0.5s ease;
             height: 400px;
-            object-fit: contain; /* Ensures the image is fully visible */
+            object-fit: cover;
         }
 
         /* Controls */
-        .slider-container {
-            position: relative;
-        }
-
-        /* Button Style */
         .slider-controls button {
             background-color: rgba(0, 0, 0, 0.5);
             border: none;
