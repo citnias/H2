@@ -1,5 +1,5 @@
 body {
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+    background: url('h1.jpg') no-repeat center center fixed; /* Ganti dengan path yang sesuai */
     background-size: cover;
     animation: backgroundMove 15s infinite linear;
 }
@@ -23,5 +23,6 @@ body {
 .contact-info {
     margin-top: 20px; /* Jarak antara kontak dan sub-title */
 }
+
 
 
