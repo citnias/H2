@@ -1,57 +1,33 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Perusahaan</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #0f0f0f;
-            color: #00ff00;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        .profile-img {
-            width: 200px; /* Ukuran tetap untuk gambar profil */
-            border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
-            border: 3px solid #00ff00; /* Border hijau */
-            animation: pulse 2s infinite; /* Animasi untuk efek pernapasan */
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        .animated {
-            display: inline-block; /* Memungkinkan efek animasi */
-            animation: fadeIn 1s ease-in-out; /* Animasi untuk efek fade-in */
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container text-center mt-5">
-        <div class="profile">
-            <img src="HH.jpeg" alt="Foto Anda" class="profile-img mb-3">
-            <h1 class="display-4">Hendrik Halawa</h1>
-            <p class="contact">
-                <span class="animated">Telepon: 082267403105</span><br>
-                <span class="animated">Email: hendrikhalawa711@gmail.com</span>
-            </p>
-        </div>
-        <div class="portfolio-link">
-            <a href="portfolio.html" class="btn btn-success btn-lg mt-3">Lihat Portofolio Saya</a>
-        </div>
+<body class="bg-dark text-white">
+
+<div class="container text-center">
+    <h1 class="mt-5">Welcome to My Profile</h1>
+    <img src="images/profile.jpg" alt="Profile Photo" class="rounded-circle img-fluid mt-3" style="width: 200px;">
+    <h2>Hendrik Halawa</h2>
+    <p>Email: <a href="mailto:your-email@example.com" class="text-white">your-email@example.com</a></p>
+    <p>HP/WA: <a href="tel:+628123456789" class="text-white">+62 812 3456 789</a></p>
+
+    <div class="social-icons mt-3">
+        <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
     </div>
 
-    <!-- Bootstrap JS dan dependensinya -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <a href="portfolio.html" class="btn btn-primary mt-4">View My Works</a>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
+
 
