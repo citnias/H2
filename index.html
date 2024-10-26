@@ -6,14 +6,24 @@
     <title>Hendrik Halawa</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Link Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMcOm1OowG5hN4O4nsQ5iWbSVF1R9iNEP5cZnF/" crossorigin="anonymous">
     <style>
         /* Gaya Responsif untuk Nama */
         .name-effect {
             font-size: 2.5rem;
-            white-space: nowrap; /* Mencegah teks melompat ke baris baru */
+            white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
+        
+        /* Media query untuk layar kecil */
+        @media (max-width: 576px) {
+            .name-effect {
+                font-size: 1.5rem; /* Mengurangi ukuran font di layar kecil */
+            }
+        }
+        
         /* Border Box pada Informasi Profil */
         .profile-info {
             border: 2px solid white;
@@ -21,6 +31,7 @@
             margin-top: 15px;
             border-radius: 8px;
         }
+        
         /* Warna Icon Sosial Media */
         .social-icons a {
             color: white;
@@ -59,6 +70,6 @@
     </div>
 </div>
 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-nxE/4SOi3pFC3rDkY/aCNi+zGfWyt/+mQ4EKT4hD+iXtxD/Uu6EGm5mQyDXG3J+Y" crossorigin="anonymous"></script>
 </body>
 </html>
