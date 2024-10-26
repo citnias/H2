@@ -56,9 +56,3 @@ body {
     max-width: 100%;
     margin-bottom: 10px;
 }
-
-/* Header dan Footer */
-header, footer {
-    height: 50px;
-    background-color: #141e30;
-}
