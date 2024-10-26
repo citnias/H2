@@ -1,75 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hendrik Halawa</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- Link Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMcOm1OowG5hN4O4nsQ5iWbSVF1R9iNEP5cZnF/" crossorigin="anonymous">
-    <style>
-        /* Gaya Responsif untuk Nama */
-        .name-effect {
-            font-size: 2.5rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        
-        /* Media query untuk layar kecil */
-        @media (max-width: 576px) {
-            .name-effect {
-                font-size: 1.5rem; /* Mengurangi ukuran font di layar kecil */
-            }
-        }
-        
-        /* Border Box pada Informasi Profil */
-        .profile-info {
-            border: 2px solid white;
-            padding: 20px;
-            margin-top: 15px;
-            border-radius: 8px;
-        }
-        
-        /* Warna Icon Sosial Media */
-        .social-icons a {
-            color: white;
-            font-size: 1.5rem;
-        }
-    </style>
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-dark text-white">
+<body>
+    <header>
+        <h1>Portofolio Saya</h1>
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="container text-center">
-    <img src="HH.jpeg" alt="Profile Photo" class="rounded-circle img-fluid mt-3" style="width: 200px;">
-    <h2 class="name-effect">HENDRIK HALAWA</h2>
-    <h3 class="sub-title">Teknik Informatika</h3>
-
-    <!-- Informasi Profil -->
-    <div class="profile-info">
-        <h4>Informasi Profil</h4>
-        <div class="social-icons mt-3">
-            <a href="https://www.instagram.com/halawahendrik/" target="_blank" class="mx-2">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="mailto:hendrikhalawa711@gmail.com" target="_blank" class="mx-2">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="https://wa.me/6282267403105" target="_blank" class="mx-2">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
-            <a href="https://hendrikhalawa2001.blogspot.com/" target="_blank" class="mx-2">
-                <i class="fas fa-blog"></i> Blogspot
-            </a>
+    <section id="portfolio">
+        <h2>Hasil Karya</h2>
+        <div class="portfolio-category">
+            <h3>Desain Foto</h3>
+            <img src="desain-foto.jpg" alt="Desain Foto" />
         </div>
-    </div>
+        <div class="portfolio-category">
+            <h3>Brosur</h3>
+            <img src="brosur.jpg" alt="Brosur" />
+        </div>
+        <div class="portfolio-category">
+            <h3>Flyer</h3>
+            <img src="flyer.jpg" alt="Flyer" />
+        </div>
+        <div class="portfolio-category">
+            <h3>Undangan</h3>
+            <img src="undangan.jpg" alt="Undangan" />
+        </div>
+        <div class="portfolio-category">
+            <h3>Edit Video</h3>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
 
-    <div class="portfolio-link">
-        <a href="portfolio.html" class="btn btn-primary mt-4" id="viewWorksBtn">Lihat Portofolio</a>
-    </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-nxE/4SOi3pFC3rDkY/aCNi+zGfWyt/+mQ4EKT4hD+iXtxD/Uu6EGm5mQyDXG3J+Y" crossorigin="anonymous"></script>
+    <footer id="contact">
+        <h2>Kontak Saya</h2>
+        <p>Email: example@example.com</p>
+        <p>WhatsApp: +628xxxxxxx</p>
+        <p><a href="https://facebook.com/username">Facebook</a></p>
+        <p><a href="https://youtube.com/username">YouTube</a></p>
+        <p><a href="https://tiktok.com/@username">TikTok</a></p>
+        <p><a href="https://blogspot.com/username">Blogspot</a></p>
+    </footer>
 </body>
 </html>
