@@ -5,56 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Slider Styles */
-        .slider-container {
-            position: relative;
-            overflow: hidden;
-            max-width: 100%;
-            margin: auto;
-            height: 400px;
+        body {
+            background-color: #343a40;
+            color: white;
         }
-
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease;
-            width: 300%; /* Menyesuaikan dengan jumlah gambar (3 gambar, jadi 300%) */
+        h1 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
         }
-
-        .slider-image, .slider-video {
-            width: 100%; /* Set width to occupy full slider width */
-            height: 400px;
-            object-fit: cover;
-        }
-
-        /* Controls */
-        .slider-controls button {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            padding: 10px;
-            color: #fff;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-        }
-
-        .slider-controls .prev {
-            left: 10px;
-        }
-
-        .slider-controls .next {
-            right: 10px;
-        }
-
-        /* 3D Text Effects */
-        h1, h2 {
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6), -3px -3px 6px rgba(0, 123, 255, 0.4);
-        }
-        
-        /* Button back-to-profile fixed at bottom */
         .btn-back {
             position: fixed;
             bottom: 20px;
@@ -63,60 +21,31 @@
         }
     </style>
 </head>
-<body class="bg-dark text-white">
+<body>
 
 <div class="container text-center">
     <h1 class="mt-5">Innovative IT Solutions and Creative Design</h1>
     
-    <h2 class="mt-4">My Portfolio</h2>
-
-    <!-- Image Slider -->
-    <div class="slider-container mt-4">
-        <div class="slider image-slider">
-            <img src="image/d1.png" class="slider-image" alt="Design 1">
-            <img src="image/d2.png" class="slider-image" alt="Design 2">
-            <img src="image/d3.png" class="slider-image" alt="Design 3">
-        </div>
-        <div class="slider-controls">
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
-        </div>
-    </div>
-
-    <!-- Video Slider -->
-    <div class="slider-container mt-5">
-        <div class="slider video-slider">
-            <video class="slider-video" autoplay loop muted>
-                <source src="image/video1.mp4" type="video/mp4">
-            </video>
-            <video class="slider-video" autoplay loop muted>
-                <source src="image/video2.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="slider-controls">
-            <button class="prev" onclick="moveVideoSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveVideoSlide(1)">&#10095;</button>
-        </div>
+    <div class="mt-4">
+        <select id="portfolioSelect" class="form-select">
+            <option value="design">Desain</option>
+            <option value="video">Video</option>
+        </select>
+        <button id="viewButton" class="btn btn-primary mt-2">Lihat</button>
     </div>
 
     <a href="index.html" class="btn btn-secondary btn-back">Back to Profile</a>
 </div>
 
 <script>
-    let imageIndex = 0;
-    let videoIndex = 0;
-
-    function moveSlide(direction) {
-        const images = document.querySelectorAll('.image-slider .slider-image');
-        imageIndex = (imageIndex + direction + images.length) % images.length;
-        document.querySelector('.image-slider').style.transform = `translateX(-${imageIndex * 100 / images.length}%)`;
-    }
-
-    function moveVideoSlide(direction) {
-        const videos = document.querySelectorAll('.video-slider .slider-video');
-        videoIndex = (videoIndex + direction + videos.length) % videos.length;
-        document.querySelector('.video-slider').style.transform = `translateX(-${videoIndex * 100 / videos.length}%)`;
-    }
+    document.getElementById('viewButton').addEventListener('click', function() {
+        const selectedValue = document.getElementById('portfolioSelect').value;
+        if (selectedValue === 'design') {
+            window.open('link-to-design-portfolio.html', '_blank'); // Ganti dengan URL portofolio desain Anda
+        } else if (selectedValue === 'video') {
+            window.open('link-to-video-portfolio.html', '_blank'); // Ganti dengan URL portofolio video Anda
+        }
+    });
 </script>
 
 </body>
