@@ -6,6 +6,27 @@
     <title>Hendrik Halawa</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya Responsif untuk Nama */
+        .name-effect {
+            font-size: 2.5rem;
+            white-space: nowrap; /* Mencegah teks melompat ke baris baru */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /* Border Box pada Informasi Profil */
+        .profile-info {
+            border: 2px solid white;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+        /* Warna Icon Sosial Media */
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 <body class="bg-dark text-white">
 
@@ -15,28 +36,29 @@
     <h3 class="sub-title">Teknik Informatika</h3>
 
     <!-- Informasi Profil -->
-    <h4 class="mt-4">Informasi Profil</h4>
-    <div class="social-icons mt-3">
-        <a href="mailto:hendrikhalawa711@gmail.com" target="_blank" class="text-white mx-2">
-            <i class="fab fa-facebook"></i> Email
-        </a>
-        <a href="mailto:hendrikhalawa711@gmail.com" target="_blank" class="text-white mx-2">
-            <i class="fab fa-facebook"></i> Email
-        </a>
-        <a href="https://wa.me/6282267403105" target="_blank" class="text-white mx-2">
-            <i class="fab fa-youtube"></i> WhatsApp
-        </a>
-        <a href="https://hendrikhalawa2001.blogspot.com/" target="_blank" class="text-white mx-2">
-            <i class="fas fa-blog"></i> Blogspot
-        </a>
+    <div class="profile-info">
+        <h4>Informasi Profil</h4>
+        <div class="social-icons mt-3">
+            <a href="https://www.instagram.com/halawahendrik/" target="_blank" class="mx-2">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="mailto:hendrikhalawa711@gmail.com" target="_blank" class="mx-2">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://wa.me/6282267403105" target="_blank" class="mx-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://hendrikhalawa2001.blogspot.com/" target="_blank" class="mx-2">
+                <i class="fas fa-blog"></i> Blogspot
+            </a>
+        </div>
     </div>
 
     <div class="portfolio-link">
-        <a id="viewWorksBtn" class="btn btn-primary mt-4">Lihat Portofolio</a>
+        <a href="portfolio.html" class="btn btn-primary mt-4" id="viewWorksBtn">Lihat Portofolio</a>
     </div>
 </div>
 
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
