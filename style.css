@@ -1,7 +1,7 @@
+/* Background dengan animasi 3D */
 body {
     background: url('bg.jpg') no-repeat center center fixed;
     background-size: cover;
-        
     animation: backgroundMove 15s infinite linear;
 }
 
@@ -10,20 +10,55 @@ body {
     100% { background-position: 100% 100%; }
 }
 
+/* Menyelaraskan halaman agar semua terlihat pada satu layar */
+.container {
+    min-height: 100vh;
+}
+
+/* Efek Nama */
 .name-effect {
     font-size: 3em;
+    color: #00c6ff;
     transform: skew(-10deg);
-    text-shadow: 2px 2px 0 #000, 4px 4px 0 #007bff; /* Menambahkan efek 3D */
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 #007bff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
+/* Subtitle */
 .sub-title {
-    font-size: 1.5em; /* Ukuran lebih kecil dari nama */
-    margin-top: 10px; /* Memberi jarak dari nama */
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #d1d1d1;
 }
 
-.contact-info {
-    margin-top: 20px; /* Jarak antara kontak dan sub-title */
+/* Informasi Profil */
+.profile-info {
+    border: 2px solid #00c6ff;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 80%;
 }
 
+/* Gaya Sosial Media */
+.social-icons .social-link {
+    color: #00c6ff;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin: 0 10px;
+}
 
+/* Foto Profil Responsif */
+.profile-photo {
+    width: 150px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
 
+/* Header dan Footer */
+header, footer {
+    height: 50px;
+    background-color: #141e30;
+}
