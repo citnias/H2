@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* Efek Nama */
+/* Efek Nama Responsif */
 .name-effect {
     font-size: 3em;
     color: #00c6ff;
@@ -26,11 +26,18 @@ body {
     text-overflow: ellipsis;
 }
 
-/* Subtitle */
+/* Ukuran responsif untuk perangkat lebih kecil */
+@media (max-width: 576px) {
+    .name-effect {
+        font-size: 2em;
+    }
+}
+
+/* Subtitle dengan warna serupa */
 .sub-title {
     font-size: 1.2em;
     margin-top: 10px;
-    color: #d1d1d1;
+    color: #00c6ff;
 }
 
 /* Informasi Profil */
