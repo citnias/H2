@@ -6,25 +6,58 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        /* Background */
         body {
             background-color: #343a40;
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
+
+        /* Teks 3D dengan efek warna berubah */
         h1 {
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff6f61;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6), 0px 0px 20px rgba(255, 111, 97, 0.8);
+            animation: colorChange 5s infinite;
         }
-        .btn-back {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 10;
+
+        @keyframes colorChange {
+            0% { color: #ff6f61; }
+            25% { color: #ffca61; }
+            50% { color: #61ff8c; }
+            75% { color: #61a8ff; }
+            100% { color: #ff6f61; }
+        }
+
+        /* Pusatkan kontainer dan beri gaya elemen */
+        .container {
+            text-align: center;
+        }
+
+        /* Gaya 3D untuk combobox dan tombol */
+        .form-select, .btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Warna tombol */
+        .btn-primary {
+            background-color: #007bff;
         }
     </style>
 </head>
 <body>
 
-<div class="container text-center">
-    <h1 class="mt-5">Innovative IT Solutions and Creative Design</h1>
+<div class="container">
+    <h1>Innovative IT Solutions and Creative Design</h1>
     
     <div class="mt-4">
         <select id="portfolioSelect" class="form-select">
@@ -34,7 +67,7 @@
         <button id="viewButton" class="btn btn-primary mt-2">Lihat</button>
     </div>
 
-    <a href="index.html" class="btn btn-secondary btn-back">Back to Profile</a>
+    <a href="index.html" class="btn btn-secondary btn-back mt-4">Back to Profile</a>
 </div>
 
 <script>
