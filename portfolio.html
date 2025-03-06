@@ -6,7 +6,6 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Background */
         body {
             background-color: #343a40;
             color: white;
@@ -17,12 +16,10 @@
             margin: 0;
         }
 
-        /* Teks 3D dengan efek warna berubah */
         h1 {
             font-size: 2.5em;
             font-weight: bold;
-            color: #ff6f61;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6), 0px 0px 20px rgba(255, 111, 97, 0.8);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
             animation: colorChange 5s infinite;
         }
 
@@ -34,23 +31,29 @@
             100% { color: #ff6f61; }
         }
 
-        /* Pusatkan kontainer dan beri gaya elemen */
         .container {
             text-align: center;
         }
 
-        /* Gaya 3D untuk combobox dan tombol */
-        .form-select, .btn {
-            margin-top: 15px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
 
-        /* Warna tombol */
-        .btn-primary {
-            background-color: #007bff;
+        .grid-item {
+            background: #212529;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.1);
+            background: #007bff;
         }
     </style>
 </head>
@@ -58,48 +61,22 @@
 
 <div class="container">
     <h1>Innovative IT Solutions and Creative Design</h1>
-    
-    <div class="mt-4">
-        <select id="portfolioSelect" class="form-select">
-            <option value="flyerSIM">FLYER SIM</option>
-            <option value="FMLeader">FLYER MEETING LEADER</option>
-            <option value="sertifikat">ALL SERTIFIKAT</option>
-            <option value="fKONTES">FLYER KONTES</option>
-            <option value="DESIGN_ACV">DESIGN ACHIEVEMENT</option>
-            <option value="hariBesar">HARI BESAR</option>
-            <option value="fUltah">Desain ULTAH</option>
-        </select>
-        <button id="viewButton" class="btn btn-primary mt-2">Lihat</button>
+    <div class="grid-container">
+        <div class="grid-item" onclick="openPage('flyerSIM.html')">FLYER SIM</div>
+        <div class="grid-item" onclick="openPage('FMLeader.html')">FLYER MEETING LEADER</div>
+        <div class="grid-item" onclick="openPage('sertifikat.html')">ALL SERTIFIKAT</div>
+        <div class="grid-item" onclick="openPage('fKONTES.html')">FLYER KONTES</div>
+        <div class="grid-item" onclick="openPage('DESIGN_ACV.html')">DESIGN ACHIEVEMENT</div>
+        <div class="grid-item" onclick="openPage('hariBesar.html')">HARI BESAR</div>
+        <div class="grid-item" onclick="openPage('FULTAH.html')">Desain ULTAH</div>
     </div>
-
-    <a href="index.html" class="btn btn-secondary btn-back mt-4">Back to Profile</a>
+    <a href="index.html" class="btn btn-secondary mt-4">Back to Profile</a>
 </div>
 
 <script>
-    document.getElementById('viewButton').addEventListener('click', function() {
-        const selectedValue = document.getElementById('portfolioSelect').value;
-        if (selectedValue === 'fUltah') {
-            window.open('FULTAH.html', '_blank');
-            
-        } else if (selectedValue === 'fKONTES') {
-            window.open('fKONTES.html', '_blank');
-            
-        } else if (selectedValue === 'flyerSIM') {
-            window.open('flyerSIM.html', '_blank');
-            
-        } else if (selectedValue === 'hariBesar') {
-            window.open('hariBesar.html', '_blank');
-            
-        } else if (selectedValue === 'FMLeader') {
-            window.open('FMLeader.html', '_blank');
-            
-        } else if (selectedValue === 'DESIGN_ACV') {
-            window.open('DESIGN_ACV.html', '_blank');
-
-        } else if (selectedValue === 'sertifikat') {
-            window.open('sertifikat.html', '_blank');
-        }
-    });
+    function openPage(page) {
+        window.open(page, '_blank');
+    }
 </script>
 
 </body>
